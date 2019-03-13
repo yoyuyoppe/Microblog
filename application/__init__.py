@@ -1,4 +1,3 @@
-from application import routes, models
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
@@ -10,3 +9,5 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
+
+from application import forms, models, routes
